@@ -1,0 +1,13 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model View123 {
+  id         Int      @id @default(autoincrement())
+  totalViews Int      @default(0)
+}
